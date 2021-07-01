@@ -1,3 +1,15 @@
 .header {
-  display: block;
+  display: flex;
+  padding: 25px 0;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__logo {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &--show {
+      animation: $animation-in-left;
+    }
+  }
 }

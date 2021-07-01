@@ -1,0 +1,47 @@
+.loader {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 140px 80px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-default-white;
+  
+  &--hide {
+    animation: $animation-out-left;
+  }
+
+  &__logo {
+    animation: $animation-in-left;
+    
+    @include viewport--sm {
+      width: 550px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    margin: 0;
+    bottom: 103px;
+    font-size: 24px;
+    line-height: 22px;
+
+    @include viewport--sm {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+
+      @include viewport--sm {
+        display: block;
+      }
+    }
+  }
+}

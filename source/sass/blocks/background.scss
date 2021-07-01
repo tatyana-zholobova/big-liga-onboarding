@@ -1,0 +1,14 @@
+.background {
+  &__image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 664px;
+    height: 651px;
+    transform: translateX(-50%);
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
+}

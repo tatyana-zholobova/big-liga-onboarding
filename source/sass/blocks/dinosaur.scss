@@ -1,0 +1,40 @@
+.dinosaur {
+  &__flag {
+    fill: $color-neon-blue;
+
+    @include viewport--sm {
+      fill: $color-default-white;
+      stroke: $color-default-black;
+    }
+  }
+
+  &__fire {
+    fill: $color-neon-blue;
+
+    @include viewport--sm {
+      fill: $color-default-white;
+    }
+  }
+
+  &__lightning {
+    &--violet {
+      fill: $color-vivid-violet;
+    }
+
+    &--red {
+      fill: $color-torch-red;
+    }
+
+    &--blue {
+      fill: $color-neon-blue;
+    }
+
+    @include viewport--sm {
+      &--violet,
+      &--red,
+      &--blue {
+        fill: $color-default-white;
+      }
+    }
+  }
+}
